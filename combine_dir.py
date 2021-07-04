@@ -11,7 +11,6 @@ fns = []
 EXTENSIONS = ["mp4", "mov", "mkv", "webm", "avi", "flv"]
 for f in os.listdir([args[0] if args else os.getcwd()][0]):
 	if not [True for x in EXTENSIONS if x in f]:
-		print(f'[DEV] Ignoring Item "{f}"')
 		continue
 	fext = (f.replace(re.sub("\\..*", "", f), "")[1::]).lower()
 	if fext != "mp4" and fext in EXTENSIONS:
